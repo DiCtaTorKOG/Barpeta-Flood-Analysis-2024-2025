@@ -76,11 +76,13 @@ $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} 
 
 ```text
 📦 Barpeta-Flood-Analysis-2024-2025
- ┣ 📂 docs/               # High-resolution PDF reports & exported maps (PNG/JPG)
- ┣ 📂 scripts/            # QGIS Raster Calculator formulas & HTML card snippets
- ┣ 📂 layout_templates/   # QGIS Print Layout templates (.qpt)
- ┣ 📂 shapefiles/         # Area of Interest (AOI) - Barpeta District Boundary (.shp / .geojson)
+ ┣ 📂 Data/               # Area of Interest (AOI) - Barpeta District Boundary (.shp / .geopkg)
+ ┣ 📂 Docs/               # High-resolution PDF reports & exported maps (PNG/JPG)
+ ┣ 📂 Layout Templates/   # QGIS Print Layout templates (.qpt)
+ ┣ 📂 Scripts/            # QGIS Raster Calculator formulas & HTML card snippets 🌟 NEW: Processing logic & algorithms
+    ┣ raster_calculator_expressions.md    # Mathematical formulas & QGIS syntax
+    ┗ pyqgis_automation_pipeline.py       # Python automation script for GIS workflows
  ┣ 📜 Barpeta_Floods.qgz  # Main QGIS Project File (Symbology & Print Layouts)
- ┣ 📜 README.md           # Project documentation
+ ┣ 📜 LICENSE             # Open-source license (MIT/GPL)
  ┣ 📜 METHODOLOGY.md      # Complete Quantitative Methodology Used for Calculation
- ┗ 📜 LICENSE             # Open-source license (MIT/GPL)
+ ┗ 📜 README.md           # Project documentation
