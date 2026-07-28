@@ -1,0 +1,11 @@
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background-color: #fcfcfc; border: 1px solid #d1d5db; border-left: 6px solid #0f766e; padding: 12px 15px; border-radius: 6px;">
+  <h3 style="margin: 0 0 8px 0; color: #0f766e; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px;">
+    ⚙️ Technical Parameters
+  </h3>
+  <ul style="margin: 0; padding-left: 18px; font-size: 11.5px; line-height: 1.7; color: #374151;">
+    <li><b>Satellite:</b> Sentinel-2 (10m Multispectral)</li>
+    <li><b>Water Index:</b> NDWI <span style="font-size: 10px; color: #666;">(Green - NIR) / (Green + NIR)</span></li>
+    <li><b>Cloud Masking:</b> SCL (Scene Classification Layer)</li>
+    <li><b>CRS Projection:</b> EPSG:32646 (UTM Zone 46N)</li>
+  </ul>
+</div>
