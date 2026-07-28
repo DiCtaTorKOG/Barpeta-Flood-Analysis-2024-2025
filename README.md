@@ -64,8 +64,8 @@ $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} 
 * Implemented **Inverted Polygon Masking** to focus visual attention strictly within the district boundary.
 * Integrated dynamic **HTML/CSS-rendered widgets** for statistical reporting, technical metadata, and visual consistency.
 * Applied specialized thematic color palettes:
-  * **2024 Baseline Map:** Hot Magenta / Pink (`#D946EF`) for high-contrast disaster baseline mapping.
-  * **2025 Comparative Map:** Cyan / Ocean Blue (`#0284c7`) to symbolize drainage and recovery.
+  * **2024 Baseline Map:** Electric Magenta / Pink (`#E600E6`) for high-contrast disaster baseline mapping.
+  * **2025 Comparative Map:** Vivid Cyan / Aqua (`#00E6E6`) to symbolize drainage and recovery.
 
 ---
 
