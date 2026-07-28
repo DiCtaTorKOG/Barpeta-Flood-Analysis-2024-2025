@@ -46,7 +46,7 @@ if("Cloud_Free_NDWI_2024@1" > 0, 1, 0)
 To quantify the net recession of waterlogged areas over the 1-year observation period, a raster subtraction model was executed between the two binary masks.
 
 ### Mathematical Formula:
-$$\Delta \text{Water} = \text{Flood\_Mask\_2025} - \text{Flood\_Mask\_2024}$$
+$$\Delta \text{Water} = \text{Flood Mask 2025} - \text{Flood Mask 2024}$$
 
 ### QGIS Raster Calculator Expression:
 ```ini
@@ -56,9 +56,9 @@ $$\Delta \text{Water} = \text{Flood\_Mask\_2025} - \text{Flood\_Mask\_2024}$$
 ### Interpretation of Output Raster Values:
 | Pixel Value | Hydrological Meaning | Cartographic Symbology |
 | :---: | :--- | :--- |
-| **`-1`** | **Recovered / Drained Land** (Water in 2024, Dry in 2025) | High-Contrast Magenta (`#E600E6`) to Dry Transition |
+| **`-1`** | **Recovered / Drained Land** (Water in 2024, Dry in 2025) | Vibrant Green (`#00CC44`) — *Drainage / Recovery* |
 | **`0`** | **Stable State** (Permanent Beels/Wetlands or Dry Land) | Transparent / No Change |
-| **`+1`** | **New Inundation** (Dry in 2024, Flooded in 2025) | Vivid Cyan (`#00E6E6`) |
+| **`+1`** | **New Inundation** (Dry in 2024, Flooded in 2025) | Electric Purple / Deep Magenta — *New Flood Hazard* |
 
 ---
 
