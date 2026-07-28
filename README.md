@@ -8,9 +8,10 @@
 ## 📌 Project Overview
 This geospatial research project provides a comprehensive comparative analysis of post-monsoon surface inundation and persistent waterlogging in **Barpeta district, Assam** between **October 22, 2024**, and **October 22, 2025**. 
 
-Using high-resolution **Sentinel-2 Level-2A** multispectral satellite imagery, surface water was delineated using the **Normalized Difference Water Index (NDWI)** combined with advanced **Scene Classification Layer (SCL)** cloud-masking techniques. The study quantifies natural drainage recovery, monitors low-lying floodplain retention along the Brahmaputra basin, and maps perennial wetland networks (*Beels*).
+Using high-resolution **ESA Copernicus Sentinel-2 Level-2A** multispectral satellite imagery, surface water was delineated using the **Normalized Difference Water Index (NDWI)** combined with advanced **Scene Classification Layer (SCL)** atmospheric and cloud-masking techniques. The study quantifies natural drainage recovery, monitors low-lying floodplain retention along the Brahmaputra basin, and maps perennial wetland networks (*Beels*).
 
 <img width="1920" height="1358" alt="Barpeta" src="https://github.com/user-attachments/assets/b15ec52c-7ab7-467d-a60c-442be7f20a71" />
+<img width="3507" height="2480" alt="Change Detection Map" src="https://github.com/user-attachments/assets/bad7ca4b-2f60-4ff5-99de-119e50fc610d" />
 
 
 ---
@@ -22,7 +23,7 @@ Using high-resolution **Sentinel-2 Level-2A** multispectral satellite imagery, s
 | **Observation Date** | October 22, 2024 | October 22, 2025 | — |
 | **Total Inundated Area** | **353.11 Sq. Km.** | **281.98 Sq. Km.** | **-71.13 Sq. Km.** |
 | **Drainage / Recovery Rate** | — | — | **~20.1% Reduction ↓** |
-| **Cloud/Shadow Masked** | Minimal Atmospheric Noise | 22,420,304 Pixels (SCL Masked) | Transparent Exclusion |
+| **Cloud/Shadow Masking** | Minimal Atmospheric Noise | 22,420,304 Pixels (SCL Masked) | Transparent Exclusion |
 
 ### 🧮 Want to see the exact Pixel-by-Pixel Math?
 👉 **[Click here to read the Full Quantitative Methodology & QGIS Raster Reports ➡️](METHODOLOGY.md)**
@@ -44,16 +45,17 @@ Using high-resolution **Sentinel-2 Level-2A** multispectral satellite imagery, s
 ## ⚙️ Step-by-Step Methodology
 
 ### Step 1: Data Acquisition & Preprocessing
-1. Downloaded Sentinel-2 L2A tiles covering Barpeta district for **October 22, 2024**, and **October 22, 2025** from the Copernicus Open Access Hub / Browser.
+1. Downloaded Sentinel-2 L2A tiles covering Barpeta district for **October 22, 2024**, and **October 22, 2025** from the **Copernicus Data Space Ecosystem (CDSE) / Copernicus Browser**.
 2. Mosaicked and clipped the raster bands (`B03`, `B08`, and `SCL`) using the official administrative vector boundary of Barpeta district.
 
 ### Step 2: Atmospheric Correction & Cloud Masking (SCL)
 To prevent cloud shadow false-positives in water detection, advanced masking was executed using the **Scene Classification Layer (SCL)** in QGIS Raster Calculator:
-* **Excluded Classes:** Value `3` (Cloud Shadows), Value `8` (Cloud Medium Probability), and Value `9` (Cloud High Probability).
+* **Excluded Classes:** Value `3` (Cloud Shadows), Value `8` (Cloud Medium Probability), Value `9` (Cloud High Probability), and Value `10` (Thin Cirrus Clouds).
 * Successfully removed over **2.24 crore interfering pixels** from the 2025 dataset to ensure 100% cloud-free surface reflectance.
 
 ### Step 3: NDWI Computation & Binary Thresholding
 Calculated the **Normalized Difference Water Index (NDWI)** to isolate open surface water and waterlogged agricultural soil:
+
 $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} + \text{NIR (B08)}}$$
 
 * Applied binary classification where **$\text{NDWI} > 0$** was classified as `1` (Water / Inundated) and **$\text{NDWI} \le 0$** as `0` (Non-Water / Dry Land).
@@ -62,13 +64,14 @@ $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} 
 * Utilized QGIS **Unique Values Report** and Raster Layer Statistics to calculate pixel counts for Value `1`.
 * Converted total pixel count to square kilometers using the 10m $\times$ 10m spatial resolution ($1 \text{ Pixel} = 100 \text{ m}^2$).
 
-### Step 5: Advanced Cartographic Visualization
+### Step 5: Advanced Cartographic Visualization & Spatial Change Detection
 * Designed a multi-page publication-grade layout using **QGIS Print Layout**.
 * Implemented **Inverted Polygon Masking** to focus visual attention strictly within the district boundary.
 * Integrated dynamic **HTML/CSS-rendered widgets** for statistical reporting, technical metadata, and visual consistency.
-* Applied specialized thematic color palettes:
+* Applied specialized thematic color palettes across a 3-map series:
   * **2024 Baseline Map:** Electric Magenta / Pink (`#E600E6`) for high-contrast disaster baseline mapping.
-  * **2025 Comparative Map:** Vivid Cyan / Aqua (`#00E6E6`) to symbolize drainage and recovery.
+  * **2025 Comparative Map:** Vivid Cyan / Aqua (`#00E6E6`) to symbolize post-monsoon drainage.
+  * **Spatial Change Detection Map:** A custom subtractive raster model (`Mask_2025 - Mask_2024`) utilizing a diverging palette—**Vibrant Green** for receded water/recovery (`-1`) and **Deep Purple** for newly inundated hazard zones (`+1`).
 
 ---
 
@@ -80,8 +83,8 @@ $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} 
  ┣ 📂 Docs/               # High-resolution PDF reports & exported maps (PNG/JPG)
  ┣ 📂 Layout Templates/   # QGIS Print Layout templates (.qpt)
  ┣ 📂 Scripts/            # QGIS Raster Calculator formulas & HTML card snippets 🌟 NEW: Processing logic & algorithms
-    ┣ raster_calculator_expressions.md    # Mathematical formulas & QGIS syntax
-    ┗ pyqgis_automation_pipeline.py       # Python automation script for GIS workflows
+ ┃  ┣ 📜 raster_calculator_expressions.md    # Mathematical formulas & QGIS syntax
+ ┃  ┗ 📜 pyqgis_automation_pipeline.py       # Python automation script for GIS workflows
  ┣ 📜 Barpeta_Floods.qgz  # Main QGIS Project File (Symbology & Print Layouts)
  ┣ 📜 LICENSE             # Open-source license (MIT/GPL)
  ┣ 📜 METHODOLOGY.md      # Complete Quantitative Methodology Used for Calculation
