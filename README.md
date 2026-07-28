@@ -79,6 +79,8 @@ $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} 
  ┣ 📂 docs/               # High-resolution PDF reports & exported maps (PNG/JPG)
  ┣ 📂 scripts/            # QGIS Raster Calculator formulas & HTML card snippets
  ┣ 📂 layout_templates/   # QGIS Print Layout templates (.qpt)
+ ┣ 📂 shapefiles/         # Area of Interest (AOI) - Barpeta District Boundary (.shp / .geojson)
+ ┣ 📜 Barpeta_Floods.qgz      # Main QGIS Project File (Symbology & Print Layouts)
  ┣ 📜 README.md           # Project documentation
  ┣ 📜 METHODOLOGY.md      # Complete Quantitative Methodology Used for Calculation
  ┗ 📜 LICENSE             # Open-source license (MIT/GPL)
