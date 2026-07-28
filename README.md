@@ -80,4 +80,5 @@ $$\text{NDWI} = \frac{\text{Green (B03)} - \text{NIR (B08)}}{\text{Green (B03)} 
  ┣ 📂 scripts/            # QGIS Raster Calculator formulas & HTML card snippets
  ┣ 📂 layout_templates/   # QGIS Print Layout templates (.qpt)
  ┣ 📜 README.md           # Project documentation
+ ┣ 📜 METHODOLOGY.md      # Complete Quantitative Methodology Used for Calculation
  ┗ 📜 LICENSE             # Open-source license (MIT/GPL)
