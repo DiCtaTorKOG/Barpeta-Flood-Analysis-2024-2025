@@ -10,7 +10,8 @@ This geospatial research project provides a comprehensive comparative analysis o
 
 Using high-resolution **Sentinel-2 Level-2A** multispectral satellite imagery, surface water was delineated using the **Normalized Difference Water Index (NDWI)** combined with advanced **Scene Classification Layer (SCL)** cloud-masking techniques. The study quantifies natural drainage recovery, monitors low-lying floodplain retention along the Brahmaputra basin, and maps perennial wetland networks (*Beels*).
 
-<img width="3507" height="2480" alt="Barpeta_Floods" src="https://github.com/user-attachments/assets/8c032088-adf6-4d62-a56d-52d484b07fb0" />
+<img width="1920" height="1358" alt="Barpeta" src="https://github.com/user-attachments/assets/b15ec52c-7ab7-467d-a60c-442be7f20a71" />
+
 
 ---
 
