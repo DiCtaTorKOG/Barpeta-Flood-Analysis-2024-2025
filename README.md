@@ -24,6 +24,9 @@ Using high-resolution **Sentinel-2 Level-2A** multispectral satellite imagery, s
 | **Drainage / Recovery Rate** | — | — | **~20.1% Reduction ↓** |
 | **Cloud/Shadow Masked** | Minimal Atmospheric Noise | 22,420,304 Pixels (SCL Masked) | Transparent Exclusion |
 
+### 🧮 Want to see the exact Pixel-by-Pixel Math?
+👉 **[Click here to read the Full Quantitative Methodology & QGIS Raster Reports ➡️](METHODOLOGY.md)**
+
 > **Highlight:** The district experienced a significant drainage recovery of **20.1%** in surface waterlogged area in 2025 compared to the 2024 post-monsoon baseline.
 
 ---
