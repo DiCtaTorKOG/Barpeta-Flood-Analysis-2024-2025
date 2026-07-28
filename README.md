@@ -7,7 +7,7 @@
 
 ## 📌 Project Overview
 This geospatial research project provides a comprehensive comparative analysis of post-monsoon surface inundation and persistent waterlogging in **Barpeta district, Assam** between **October 22, 2024**, and **October 22, 2025**. 
-
+![2024 vs 2025 Combined Map](docs/Assam Floods.png)
 Using high-resolution **Sentinel-2 Level-2A** multispectral satellite imagery, surface water was delineated using the **Normalized Difference Water Index (NDWI)** combined with advanced **Scene Classification Layer (SCL)** cloud-masking techniques. The study quantifies natural drainage recovery, monitors low-lying floodplain retention along the Brahmaputra basin, and maps perennial wetland networks (*Beels*).
 
 ---
