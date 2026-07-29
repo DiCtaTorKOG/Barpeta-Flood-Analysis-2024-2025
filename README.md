@@ -6,13 +6,11 @@
 ![Region](https://img.shields.io/badge/Region-Assam%2C%20India-e67e22?style=for-the-badge)
 
 ## 📌 Project Overview
-This geospatial research project provides a comprehensive comparative analysis of post-monsoon surface inundation and persistent waterlogging in **Barpeta district, Assam** between **October 22, 2024**, and **October 22, 2025**. 
+This geospatial research project provides a comprehensive comparative analysis of post-monsoon surface inundation and persistent waterlogging in **Barpeta district, Assam** between **October 22, 2024**, and **October 22, 2025**.
 
 Using high-resolution **ESA Copernicus Sentinel-2 Level-2A** multispectral satellite imagery, surface water was delineated using the **Normalized Difference Water Index (NDWI)** combined with advanced **Scene Classification Layer (SCL)** atmospheric and cloud-masking techniques. The study quantifies natural drainage recovery, monitors low-lying floodplain retention along the Brahmaputra basin, and maps perennial wetland networks (*Beels*).
 
 <img width="1920" height="1358" alt="Barpeta" src="https://github.com/user-attachments/assets/b15ec52c-7ab7-467d-a60c-442be7f20a71" />
-<img width="3507" height="2480" alt="Change Detection Map" src="https://github.com/user-attachments/assets/bad7ca4b-2f60-4ff5-99de-119e50fc610d" />
-
 
 ---
 
