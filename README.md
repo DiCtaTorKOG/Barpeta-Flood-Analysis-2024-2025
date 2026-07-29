@@ -12,6 +12,9 @@ Using high-resolution **ESA Copernicus Sentinel-2 Level-2A** multispectral satel
 
 <img width="1920" height="1358" alt="Barpeta" src="https://github.com/user-attachments/assets/b15ec52c-7ab7-467d-a60c-442be7f20a71" />
 
+<img width="3507" height="2480" alt="Change Detection Map" src="https://github.com/user-attachments/assets/85d6ca96-a3bf-4aea-b30e-fa4d2f1308d8" />
+
+
 ---
 
 ## 📊 Key Findings & Quantitative Analysis
